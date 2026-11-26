@@ -146,8 +146,8 @@ function datasets(){
   KEYS.forEach(k=>{
     const col=css('--c-'+(k==='air_max'?'max':k==='air_min'?'min':'sea'));
     const hid=!S.show[k];
-    out.push({data:P(cur[k].hi),borderWidth:0,pointRadius:0,fill:false,hidden:hid,tension:.3});
-    out.push({data:P(cur[k].lo),borderWidth:0,pointRadius:0,fill:'-1',backgroundColor:hexA(col,k==='sea'?.16:.12),hidden:hid,tension:.3});
+    out.push({data:P(cur[k].hi),borderWidth:0,pointRadius:0,pointHoverRadius:0,fill:false,hidden:hid,tension:.3});
+    out.push({data:P(cur[k].lo),borderWidth:0,pointRadius:0,pointHoverRadius:0,fill:'-1',backgroundColor:hexA(col,k==='sea'?.16:.12),hidden:hid,tension:.3});
   });
   KEYS.forEach(k=>{
     const col=css('--c-'+(k==='air_max'?'max':k==='air_min'?'min':'sea'));
